@@ -54,7 +54,7 @@ vec4 texture2D_WrapLength(sampler2D s, vec2 coords)
 {
 //	if(coords.x > 1.0 || coords.x < 0.0 || coords.y > 1.0 || coords.y  < 0.0)
 	//	return vec4(0.0);
-	return texture2D( s, coords );
+	return texture( s, coords );
 }
 
 void main()

@@ -72,7 +72,7 @@ void main()
 	
 	for(int i = 0; i < 11; i++)
 	{	
-		FragColor += texture2D(image, btc[i]) * kernel_11[i];
+		FragColor += texture(image, btc[i]) * kernel_11[i];
 	}
 
    

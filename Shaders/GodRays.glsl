@@ -45,11 +45,11 @@ void main()
 	vec2 deltaTexCoord = (tc-lightPositionOnScreen.xy);
 	deltaTexCoord *= 1.0 / float(NUM_SAMPLES) * density;
 	float illuminationDecay = 1.0;
-	vec4 color =texture2D(UserMapSampler, tc.xy)*0.4;
+	vec4 color =texture(UserMapSampler, tc.xy)*0.4;
 	for(int i=0; i < NUM_SAMPLES ; i++)
 	{
 		tc -= deltaTexCoord;
-		vec4 sample = texture2D(UserMapSampler, tc)*0.4;
+		vec4 sample = texture(UserMapSampler, tc)*0.4;
 		sample *= illuminationDecay * weight;
 		color += sample;
 		illuminationDecay *= decay;
