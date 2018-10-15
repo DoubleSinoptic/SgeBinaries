@@ -105,7 +105,7 @@ void main(void)
 	{
 		vec2 e = o_texCoord;
 		e.y = e.y;
-		vec4 tmp = texture2D(albedo, e);
+		vec4 tmp = texture(albedo, e);
 		albedoColor = tmp.rgb;
 		albedoAlpha = tmp.a;
 	}

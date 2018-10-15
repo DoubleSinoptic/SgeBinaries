@@ -34,12 +34,12 @@ void main()
 
     for (int i = 0; i < 9; i++)
     {
-        vec4 colour = texture2D(ssaoInput, (TexCoords + offset[i]) / screen_size);
+        vec4 colour = texture(ssaoInput, (TexCoords + offset[i]) / screen_size);
         sum += colour * kernel[i];
     }
 
     float sharpen_amount = 0.25;
-    FragColor = (sum * sharpen_amount) + texture2D(ssaoInput, TexCoords / screen_size);
+    FragColor = (sum * sharpen_amount) + texture(ssaoInput, TexCoords / screen_size);
 }
  */ 
 
