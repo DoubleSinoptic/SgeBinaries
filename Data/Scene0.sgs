@@ -1,0 +1,21 @@
+@load
+
+spawn "TestPuickUp" 
+	{1, 3, 4}
+	{"pickup0"}
+	
+spawn "SandTerrain" 
+	{0, 0, 0}
+	{""}
+
+spawn "CameraFlow" 
+	{2, 3, 5}
+	{"cam0"}	
+	
+@triger OnSceneLoaded 
+	SetDefaultCamera "cam0"
+	ShowRenderSettings
+	HideMainMenu
+@triger OnSceneUnloaded
+	Log "scene 0 unlodeed"
+	
