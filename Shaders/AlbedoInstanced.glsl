@@ -56,13 +56,13 @@ void main(void)
 
 &
 #version 130
-#extension GL_ARB_explicit_attrib_location : enable
-layout(location = 0) out vec4 FragPositon;
-layout(location = 1) out vec4 FragNormal;
-layout(location = 2) out vec4 FragColor;
-layout(location = 3) out vec4 FragSettings;
-layout(location = 4) out vec4 FragDepth;
-layout(location = 5) out vec4 FragPBR;
+
+ out vec4 FragPositon;
+ out vec4 FragNormal;
+out vec4 FragColor;
+ out vec4 FragSettings;
+ out vec4 FragDepth;
+out vec4 FragPBR;
 
 
 uniform mat4 view;
